@@ -9,7 +9,7 @@ Projeto G2 – Tema 4: análise e visualização de dados sobre o comportamento 
 | Recurso | Endereço |
 |---|---|
 | Código-fonte (GitHub) | https://github.com/Vitor-Corti/projeto-g1/tree/main/projeto-desemprego-brasil |
-| Página do projeto (GitHub Pages) | https://SEU-USUARIO.github.io/projeto-desemprego-brasil |
+| Página do projeto (GitHub Pages) | https://vitor-corti.github.io/siteIndiceDesemprego/ |
 | Dashboard (Streamlit Cloud) | https://projeto-g1vitoor.streamlit.app/ |
 
 ## 🎯 Objetivo
