@@ -31,7 +31,7 @@
 
 ---
 
-## 📌 Sobre o projeto
+##  Sobre o projeto
 
 Este projeto apresenta uma análise exploratória e visual da **evolução do desemprego no Brasil entre 2015 e 2024**, utilizando Python para tratamento, análise e visualização dos dados.
 
@@ -41,40 +41,40 @@ O projeto possui um **dashboard interativo desenvolvido em Streamlit**, permitin
 
 ---
 
-## 🎯 Objetivos
+ Objetivos
 
 O projeto busca responder questões como:
 
-- 📈 Como o desemprego evoluiu ao longo dos anos?
-- 🌎 Quais regiões apresentam maiores taxas de desemprego?
-- 🏙️ Quais estados são mais afetados?
-- 🚨 Quais períodos podem ser considerados críticos?
-- 💰 Existe relação entre renda média e desemprego?
-- 📊 Existe relação entre inflação e desemprego?
-- 🏭 Como diferentes setores econômicos aparecem na análise?
+-  Como o desemprego evoluiu ao longo dos anos?
+-  Quais regiões apresentam maiores taxas de desemprego?
+-  Quais estados são mais afetados?
+-  Quais períodos podem ser considerados críticos?
+-  Existe relação entre renda média e desemprego?
+-  Existe relação entre inflação e desemprego?
+-  Como diferentes setores econômicos aparecem na análise?
 
 ---
 
-## 🖥️ Dashboard
+##  Dashboard
 
 O dashboard foi desenvolvido utilizando **Streamlit** e apresenta indicadores e visualizações interativas.
 
 ### Principais recursos
 
-- 📌 Indicadores gerais de desemprego;
-- 📌 Estado com maior taxa de desemprego;
-- 📌 Região mais afetada;
-- 📌 Quantidade de desempregados no último trimestre;
-- 📌 Renda média;
-- 📌 Evolução temporal;
-- 📌 Comparação entre regiões;
-- 📌 Comparação entre estados;
-- 📌 Relação entre renda e desemprego;
-- 📌 Heatmap por ano e trimestre;
-- 📌 Tabela dinâmica;
-- 📌 Filtros interativos;
-- 📌 Interpretações dos gráficos;
-- 📌 Conclusão executiva.
+-  Indicadores gerais de desemprego;
+-  Estado com maior taxa de desemprego;
+-  Região mais afetada;
+-  Quantidade de desempregados no último trimestre;
+-  Renda média;
+-  Evolução temporal;
+-  Comparação entre regiões;
+-  Comparação entre estados;
+-  Relação entre renda e desemprego;
+-  Heatmap por ano e trimestre;
+-  Tabela dinâmica;
+-  Filtros interativos;
+-  Interpretações dos gráficos;
+-  Conclusão executiva.
 
 ---
 
