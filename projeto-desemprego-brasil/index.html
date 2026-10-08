@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evolução do desemprego no Brasil, 2015–2024</title>
+<meta name="description" content="Análise de dados do desemprego no Brasil entre 2015 e 2024: tendências, crises e desigualdade regional.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,700&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f8f9;--ink:#13233a;--muted:#55657a;--line:#d5dde5;--accent:#0b5c8a;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1824;--ink:#e8eef5;--muted:#9fb0c3;--line:#26364a;--accent:#6cb8e6;--card:#16243a}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Public Sans",system-ui,sans-serif}
+main{max-width:62rem;margin:0 auto;padding:0 1.25rem 4rem}
+h1,h2,h3{font-family:Literata,Georgia,serif;line-height:1.2;margin:0}
+a{color:var(--accent)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+header{padding:4rem 0 2rem}
+h1{font-size:clamp(2.1rem,5.5vw,3.6rem);font-weight:700;max-width:18ch}
+.lead{max-width:60ch;color:var(--muted);margin:1.25rem 0 0}
+.strip{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;margin:2.5rem 0 .5rem}
+.cell{padding:1rem .25rem .8rem;text-align:center;border-radius:3px;color:#fff;font-weight:600}
+.cell b{display:block;font:700 1.15rem Literata,serif}
+.cell span{font-size:.8rem;opacity:.92}
+.note{font-size:.9rem;color:var(--muted);margin:0}
+section{padding-top:3.25rem}
+h2{font-size:1.7rem;margin-bottom:1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.25rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1.25rem}
+.card h3{font-size:1.15rem;margin-bottom:.4rem}
+.card p{margin:0;color:var(--muted)}
+.bars{list-style:none;padding:0;margin:0;display:grid;gap:.7rem}
+.bars li{display:grid;grid-template-columns:7rem 1fr 4rem;align-items:center;gap:.75rem}
+.bar{height:1.4rem;background:var(--line);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent)}
+.bars .v{text-align:right;font-weight:600}
+.links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:5px;border:1.5px solid var(--accent);text-decoration:none;font-weight:600}
+.btn.main{background:var(--accent);color:var(--bg)}
+ul.plain{padding-left:1.2rem;color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:3.5rem;padding-top:1.25rem;color:var(--muted);font-size:.9rem}
+@media (max-width:640px){.strip{grid-template-columns:repeat(5,1fr)}.bars li{grid-template-columns:5.5rem 1fr 3.5rem}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Desemprego no Brasil caiu em dez anos, mas o Nordeste ficou para trás</h1>
+  <p class="lead">Análise de 800 registros trimestrais de 20 estados entre 2015 e 2024, com dashboard interativo para explorar tendências, crises e diferenças entre regiões.</p>
+  <div class="strip" id="strip" role="img" aria-label="Taxa média de desemprego por ano, de 2015 a 2024. Picos em 2016, 2020 e 2021; menor valor em 2024."></div>
+  <p class="note">Taxa média de desemprego por ano. Quanto mais escuro, maior o desemprego.</p>
+  <div class="links">
+    <a class="btn main" href="https://SEU-APP.streamlit.app" rel="noopener">Abrir o dashboard</a>
+    <a class="btn" href="https://github.com/SEU-USUARIO/projeto-desemprego-brasil" rel="noopener">Ver código no GitHub</a>
+  </div>
+</header>
+
+<section>
+  <h2>O que a análise mostra</h2>
+  <div class="grid">
+    <article class="card"><h3>Queda de 1,54 ponto percentual</h3><p>A taxa média foi de 9,97% em 2015 para 8,43% em 2024, o menor valor da série, mesmo após dois choques.</p></article>
+    <article class="card"><h3>Três anos de crise</h3><p>2016 (11,23%), 2020 (11,35%) e 2021 (11,45%) superam o limite de média mais um desvio-padrão (11,01%). O pior trimestre foi 2020-T3, com 11,85%.</p></article>
+    <article class="card"><h3>Desigualdade regional persistente</h3><p>Os cinco estados com maior desemprego (CE, PB, BA, PE e MA) são nordestinos, e a ordem entre regiões quase não muda ao longo dos anos.</p></article>
+  </div>
+</section>
+
+<section>
+  <h2>Taxa média de desemprego por região</h2>
+  <ul class="bars" id="bars"></ul>
+  <p class="note" style="margin-top:1rem">O Nordeste tem quase o dobro da taxa do Sul. Além disso, 37% dos trimestres do Nordeste estão em nível de risco crítico; no Sul e no Centro-Oeste, nenhum.</p>
+</section>
+
+<section>
+  <h2>O que não explica o desemprego</h2>
+  <p>Nesta base simulada, renda média, inflação e vagas formais têm correlação próxima de zero com a taxa de desemprego. Em dados reais do IBGE, a expectativa é encontrar relações mais fortes; por isso, essa é uma limitação do dataset e não uma conclusão econômica.</p>
+</section>
+
+<section>
+  <h2>Como o projeto foi feito</h2>
+  <ul class="plain">
+    <li>Notebook com limpeza, engenharia de atributos, KPIs, 13 visualizações e interpretação (<code>notebooks/analise_desemprego.ipynb</code>).</li>
+    <li>Dashboard em Streamlit com seis filtros, KPIs, gráficos e tabela dinâmica (<code>app.py</code>).</li>
+    <li>Python, Pandas, Matplotlib, Seaborn, Streamlit e GitHub.</li>
+  </ul>
+</section>
+
+<footer>
+  <p style="margin:0 0 .4rem"><strong>Autor:</strong> Vitor Cristino Corti</p>
+  <p style="margin:0 0 .4rem"><strong>Disciplina:</strong> Linguagens de Programação</p>
+  <p style="margin:0 0 .4rem"><strong>Professor:</strong> Alexandre Neves Louzada</p>
+  <p style="margin:0">Projeto G2, Tema 4. Os dados são simulados e não representam estatísticas oficiais.</p>
+</footer>
+</main>
+<script>
+const anos={2015:9.97,2016:11.23,2017:10.00,2018:9.67,2019:8.89,2020:11.35,2021:11.45,2022:8.94,2023:9.10,2024:8.43};
+const min=8.4,max=11.5,strip=document.getElementById('strip');
+for(const [a,v] of Object.entries(anos)){
+  const t=(v-min)/(max-min), l=62-t*40, s=45+t*30;
+  strip.insertAdjacentHTML('beforeend',`<div class="cell" style="background:hsl(${28-t*28} ${s}% ${l}%)"><b>${v.toFixed(2).replace('.',',')}%</b><span>${a}</span></div>`);
+}
+const reg=[['Nordeste',13.28],['Norte',10.77],['Sudeste',9.02],['Centro-Oeste',8.03],['Sul',6.79]];
+document.getElementById('bars').innerHTML=reg.map(([n,v])=>`<li><span>${n}</span><span class="bar"><i style="width:${v/14*100}%"></i></span><span class="v">${v.toFixed(2).replace('.',',')}%</span></li>`).join('');
+</script>
+</body>
+</html>
